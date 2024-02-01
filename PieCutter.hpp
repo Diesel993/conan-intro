@@ -2,6 +2,12 @@
 
 #include "units.h"
 
+using namespace units::angle;
+using namespace units::dimensionless;
+using namespace units::literals;
+using namespace units::length;
+using namespace units::area;
+
 static constexpr double PI = 3.14;
 
 class PieCutter
@@ -9,8 +15,7 @@ class PieCutter
     public:
         explicit PieCutter() = default;
     
-        deg_t getAnglePerPiece(const double pieces);
-        // rad getAngleInRadPerPiece(const double pieces);
-        double getAmountOfPieces(const deg degrees);
-        // double getAmountOfPieces(const rad degrees);
+        degree_t getAnglePerPiece(const scalar_t pieces);
+        square_meter_t getAreaOfPieInAnAwkwardWay(const centimeter_t length, const millimeter_t width);
+        meter_t implicitMillimeterToMeter(const millimeter_t length);
 };

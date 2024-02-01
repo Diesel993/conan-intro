@@ -1,11 +1,18 @@
 #include "PieCutter.hpp"
 
-deg_t PieCutter::getAnglePerPiece(const double pieces)
+
+degree_t PieCutter::getAnglePerPiece(const scalar_t pieces)
 {
-    return 360.0 / pieces;
+    return 360_deg / pieces;
 }
 
-double PieCutter::getAmountOfPieces(const deg degrees)
+square_meter_t PieCutter::getAreaOfPieInAnAwkwardWay(const centimeter_t length, const millimeter_t width)
 {
-    return 360.0_deg / degrees;
+    return length * width;
 }
+
+meter_t PieCutter::implicitMillimeterToMeter(const millimeter_t length)
+{
+    return length;
+}
+
