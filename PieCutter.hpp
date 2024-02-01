@@ -17,5 +17,4 @@ class PieCutter
     
         degree_t getAnglePerPiece(const scalar_t pieces);
         square_meter_t getAreaOfPieInAnAwkwardWay(const centimeter_t length, const millimeter_t width);
-        meter_t implicitMillimeterToMeter(const millimeter_t length);
 };
