@@ -2,9 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 project(piecutter)
 
-set(CMAKE_TOOLCHAIN_FILE "$ENV{CONAN_CMAKE_TOOLCHAIN_FILE}") # Runs the conan_toolchain.cmake. This includes the correct paths of the dependencies. 
-
-find_package(units) # Find the units-config.cmake file in the build folder
+find_package(units REQUIRED) # Find the units-config.cmake file in the build folder
 find_package(GTest) # Find the GTestConfig.cmake file in the build folder
 
 # Terminal executable
